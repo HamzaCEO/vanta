@@ -1,0 +1,314 @@
+.siteContent {
+  position: relative;
+  z-index: 2;
+  background: var(--vanta-void);
+}
+
+.manifesto,
+.principles,
+.work,
+.studio,
+.commission {
+  padding: clamp(5rem, 11vw, 11rem) clamp(1.4rem, 7vw, 8rem);
+  border-top: 1px solid var(--vanta-line);
+}
+
+.manifesto {
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.55fr) minmax(0, 1.45fr);
+  gap: clamp(2rem, 8vw, 9rem);
+}
+
+.sectionMeta,
+.sectionHeading > span {
+  color: var(--vanta-ash);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.kicker {
+  color: var(--vanta-metal);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.manifesto h2,
+.studio h2,
+.commission h2 {
+  max-width: 12ch;
+  margin-top: 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 6vw, 6.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.project h3 a {
+  transition: color 220ms ease;
+}
+
+.project h3 a:hover,
+.project h3 a:focus-visible {
+  color: var(--vanta-metal);
+}
+
+.lede {
+  max-width: 42rem;
+  margin-top: 2rem;
+  color: rgba(236, 231, 222, 0.62);
+  font-size: clamp(0.95rem, 1.3vw, 1.2rem);
+  line-height: 1.75;
+}
+
+.sectionHeading {
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.55fr) minmax(0, 1.45fr);
+  gap: clamp(2rem, 8vw, 9rem);
+  align-items: end;
+}
+
+.sectionHeading h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.principleGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: clamp(3rem, 7vw, 6rem);
+  border-top: 1px solid var(--vanta-line);
+}
+
+.principle {
+  min-height: 20rem;
+  padding: 1.5rem 1.5rem 0 0;
+  border-right: 1px solid var(--vanta-line);
+}
+
+.principle + .principle {
+  padding-left: 1.5rem;
+}
+
+.principle:last-child {
+  border-right: 0;
+}
+
+.principle > span {
+  color: var(--vanta-metal);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+}
+
+.principle h3 {
+  margin-top: 5rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  letter-spacing: -0.04em;
+}
+
+.principle p {
+  max-width: 25rem;
+  margin-top: 1.1rem;
+  color: var(--vanta-ash);
+  line-height: 1.7;
+}
+
+.projectList {
+  margin-top: clamp(3rem, 7vw, 6rem);
+  border-top: 1px solid var(--vanta-line);
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr) 10rem;
+  gap: 2rem;
+  padding: 2rem 0 2.5rem;
+  border-bottom: 1px solid var(--vanta-line);
+}
+
+.projectIndex,
+.projectMeta,
+.projectTopline,
+.project li {
+  color: var(--vanta-ash);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.projectTopline,
+.projectMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.project h3 {
+  margin-top: 1.3rem;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 5.2rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.projectMain > p {
+  max-width: 42rem;
+  margin-top: 1.3rem;
+  color: rgba(236, 231, 222, 0.62);
+  line-height: 1.7;
+}
+
+.project ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.2rem;
+  margin-top: 1.5rem;
+  list-style: none;
+}
+
+.projectMeta {
+  align-items: start;
+  flex-direction: column;
+}
+
+.studio {
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.55fr) minmax(0, 1.45fr);
+  gap: clamp(2rem, 8vw, 9rem);
+  background: #0b0d10;
+}
+
+.method {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: clamp(3rem, 6vw, 5rem);
+  border-top: 1px solid var(--vanta-line);
+}
+
+.method article {
+  padding: 1.4rem 1.4rem 0 0;
+  border-right: 1px solid var(--vanta-line);
+}
+
+.method article + article {
+  padding-left: 1.4rem;
+}
+
+.method article:last-child {
+  border-right: 0;
+}
+
+.method span {
+  color: var(--vanta-metal);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+}
+
+.method h3 {
+  margin-top: 3.5rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.method p {
+  margin-top: 0.8rem;
+  color: var(--vanta-ash);
+  line-height: 1.65;
+}
+
+.commission {
+  display: block;
+  min-height: 70vh;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem clamp(1.4rem, 7vw, 8rem) 2rem;
+  color: var(--vanta-ash);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.footer > div,
+.footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+}
+
+.footer a:hover,
+.footer a:focus-visible {
+  color: var(--vanta-warm-white);
+}
+
+@media (max-width: 800px) {
+  .manifesto,
+  .sectionHeading,
+  .studio {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .principleGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .principle,
+  .principle + .principle {
+    min-height: auto;
+    padding: 1.5rem 0 3rem;
+    border-right: 0;
+    border-bottom: 1px solid var(--vanta-line);
+  }
+
+  .principle h3 {
+    margin-top: 2.5rem;
+  }
+
+  .project {
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .projectMeta {
+    grid-column: 2;
+    flex-direction: row;
+  }
+
+  .method {
+    grid-template-columns: 1fr;
+  }
+
+  .method article,
+  .method article + article {
+    padding: 1.3rem 0 2rem;
+    border-right: 0;
+    border-bottom: 1px solid var(--vanta-line);
+  }
+
+  .method h3 {
+    margin-top: 2rem;
+  }
+
+  .commission {
+    min-height: 70vh;
+  }
+
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.sectionLink { display:inline-block; margin-top:1.5rem; border-bottom:1px solid var(--vanta-metal); padding-bottom:.45rem; color:var(--vanta-warm-white); font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; }
+.sectionLink:hover,.sectionLink:focus-visible { color:var(--vanta-metal); }

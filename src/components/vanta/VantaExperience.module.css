@@ -1,0 +1,49 @@
+.scrollTrack {
+  position: relative;
+  width: 100%;
+  /* Extended through Phase 7: ARRIVAL → APPROACH → ENTRANCE → THRESHOLD → INTERIOR →
+     TRANSFORMATION → DEEP ENVIRONMENT → FINAL APPROACH → FINAL REVEAL. The scroll distance covers the portal crossing, interior entry,
+     architectural transformation, and deep architectural travel without padding the page with empty space. */
+  height: 920vh;
+  background: var(--vanta-void);
+}
+
+.stage {
+  /* `position: fixed` rather than `sticky`: pinning the stage to the
+     viewport with `fixed` avoids a rendering corruption where the WebGL
+     canvas intermittently failed to paint most of its content during
+     real scroll events when its ancestor used `position: sticky`
+     (reproduced consistently in headless/software-rendered Chromium;
+     see Phase 3 verification notes). `fixed` is layout-equivalent here
+     since `scrollTrack` is the only content on the page — nothing sits
+     below it that the stage would need to "release" and scroll away
+     from. If a later phase adds content after this track, revisit this
+     with a scroll-driven transform instead of relying on `fixed`.  */
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100dvh;
+  min-height: 100dvh;
+  overflow: hidden;
+  background: var(--vanta-void);
+}
+
+.canvasMount {
+  position: absolute;
+  inset: 0;
+}
+
+.fallback {
+  position: absolute;
+  inset: 0;
+  background: var(--vanta-void);
+}
+
+@media (max-width: 768px) {
+  .scrollTrack {
+    /* Shorter journey on mobile — matches the reduced camera travel
+       in cameraTimeline.ts's MOBILE_KEYFRAMES. Extended proportionally
+       for the Phase 5 architectural transformation, deep-environment travel, and the final reveal. */
+    height: 700vh;
+  }
+}

@@ -1,0 +1,135 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.form label {
+  display: grid;
+  gap: 0.6rem;
+  color: var(--vanta-ash);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.form input,
+.form select,
+.form textarea {
+  width: 100%;
+  border: 1px solid var(--vanta-line);
+  border-radius: 0;
+  padding: 1rem;
+  color: var(--vanta-warm-white);
+  background: #08090b;
+  font: inherit;
+  outline: none;
+}
+
+.form textarea {
+  resize: vertical;
+}
+
+.form input:focus-visible,
+.form select:focus-visible,
+.form textarea:focus-visible {
+  border-color: rgba(169, 183, 194, 0.7);
+  outline: 1px solid rgba(169, 183, 194, 0.35);
+  outline-offset: 2px;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: rgba(236, 231, 222, 0.25);
+}
+
+.wide,
+.submitRow {
+  grid-column: 1 / -1;
+}
+
+.submitRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--vanta-line);
+}
+
+.submitRow span {
+  color: var(--vanta-ash);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.submitRow button,
+.success button {
+  border: 1px solid rgba(236, 231, 222, 0.45);
+  padding: 0.9rem 1.1rem;
+  color: var(--vanta-warm-white);
+  background: transparent;
+  font: inherit;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.submitRow button:hover,
+.submitRow button:focus-visible,
+.success button:hover,
+.success button:focus-visible {
+  border-color: var(--vanta-warm-white);
+}
+
+.success {
+  max-width: 36rem;
+  margin-top: 3rem;
+  padding: 2rem;
+  border: 1px solid var(--vanta-line);
+  background: #0b0d10;
+}
+
+.success > span {
+  color: var(--vanta-metal);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.success h3 {
+  margin-top: 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  letter-spacing: -0.05em;
+}
+
+.success p {
+  margin-top: 0.9rem;
+  color: var(--vanta-ash);
+  line-height: 1.6;
+}
+
+.success button {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .wide,
+  .submitRow {
+    grid-column: auto;
+  }
+
+  .submitRow {
+    align-items: start;
+    flex-direction: column;
+  }
+}
